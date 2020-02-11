@@ -10,14 +10,17 @@ namespace DetLillePengeInstitut
     {
         public void PrintMenu()
         {
-            Console.WriteLine("Velkommen til bank app");
+            Console.WriteLine("Velkommen til det lille pengeinstitut");
+            Console.WriteLine("Banken hvor dine data forsvinder for evigt hvis vi slukker vores server :-)");
             Console.WriteLine("1. Opret kunde");
             Console.WriteLine("2. Opret konto");
             Console.WriteLine("3. Print kunde");
             Console.WriteLine("4. Print konto");
-            Console.WriteLine("5. Slet kunde");
-            Console.WriteLine("6. Slet konto");
-            Console.WriteLine("7. Luk program");
+            Console.WriteLine("5. Print kapital");
+            Console.WriteLine("5. Indsæt beløb");
+            Console.WriteLine("6. Slet kunde");
+            Console.WriteLine("7. Slet konto");
+            Console.WriteLine("8. Luk program");
         }
     }
 }

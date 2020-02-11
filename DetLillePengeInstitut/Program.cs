@@ -14,9 +14,8 @@ namespace DetLillePengeInstitut
             List<Kunde> Kunder = new List<Kunde>();
             do
             {
-                string Kør = Console.ReadLine();
                 Menu Menu = new Menu();
-                string[] lovligeMenuValg = { "1", "2", "3", "4", "5", "6", "7" };
+                string[] lovligeMenuValg = { "1", "2", "3", "4", "5", "6", "7", "8" };
                 string menuValg;
                 bool ulovligtMenuValg = true;
                 Menu.PrintMenu();
@@ -35,27 +34,38 @@ namespace DetLillePengeInstitut
                 switch (menuValg)
                 {
                     case "1":
-                        Opret Kunde = new Opret();
+                        Opret Kunde = new Opret(Kunder);
                         Kunde.OpretKunde();
-                        Kunder = Kunde.GetKunder;
                         break;
                     case "2":
                         Opret OpretKonto = new Opret(Kunder);
+                        OpretKonto.OpretKonto();
                         break;
                     case "3":
                         Print PrintKunder = new Print(Kunder);
-                        PrintKunder.PrintKunder();
+                        PrintKunder.PrintKunde(); 
                         break;
                     case "4":
-                        Print PrintKonto = new Print();
+                        Print PrintKonto = new Print(Kunder);
+                        PrintKonto.PrintKonto();
                         break;
                     case "5":
-                        Slet SletKunde = new Slet();
+                        Print PrintKapital = new Print(Kunder);
+                        PrintKapital.PrintSamletKapital();
                         break;
                     case "6":
-                        Slet SletKonto = new Slet();
+                        Indsæt IndsætPenge = new Indsæt(Kunder);
+                        IndsætPenge.IndsætBeløb();
                         break;
                     case "7":
+                        Slet KundeSlet = new Slet(Kunder);
+                        Kunder = KundeSlet.SletKunde();
+                        break;
+                    case "8":
+                        Slet SletKonto = new Slet(Kunder);
+                        SletKonto.SletKonto();
+                        break;
+                    case "9":
                         programKøre = false;
                         break;
                 }

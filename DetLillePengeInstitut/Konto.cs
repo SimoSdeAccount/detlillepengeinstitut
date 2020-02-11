@@ -37,5 +37,9 @@ namespace DetLillePengeInstitut
             Console.WriteLine("Saldo: " + GetSetSaldo.ToString());
             Console.WriteLine("Rentefod: " + rentefod.ToString());
         }
+        public void IndsætBeløb(int Beløb)
+        {
+            GetSetSaldo += Beløb;
+        }
     }
 }
