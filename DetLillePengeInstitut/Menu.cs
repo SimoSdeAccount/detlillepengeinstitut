@@ -17,10 +17,10 @@ namespace DetLillePengeInstitut
             Console.WriteLine("3. Print kunde");
             Console.WriteLine("4. Print konto");
             Console.WriteLine("5. Print kapital");
-            Console.WriteLine("5. Indsæt beløb");
-            Console.WriteLine("6. Slet kunde");
-            Console.WriteLine("7. Slet konto");
-            Console.WriteLine("8. Luk program");
+            Console.WriteLine("6. Indsæt beløb");
+            Console.WriteLine("7. Slet kunde");
+            Console.WriteLine("8. Slet konto");
+            Console.WriteLine("9. Luk program");
         }
     }
 }

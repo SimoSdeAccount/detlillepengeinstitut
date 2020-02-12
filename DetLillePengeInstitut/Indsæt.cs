@@ -8,20 +8,15 @@ namespace DetLillePengeInstitut
 {
     class Indsæt
     {
-
         List<Kunde> kunder = new List<Kunde>();
         public Indsæt() { }
         public Indsæt(List<Kunde> inKunder)
         {
             kunder = inKunder;
         }
-        public void IndsætBeløb()
+        private bool VælgKontoType()
         {
-            bool UlovligtBeløbInput = true;
-            int beløb = 0;
             string kontoTypeValg = string.Empty;
-            Selector KundeKontoVælg = new Selector(kunder);
-            int kundeValg = KundeKontoVælg.VælgKunde();
             bool ulovligKontoTypeValg = true;
             do
             {
@@ -35,49 +30,55 @@ namespace DetLillePengeInstitut
             while (ulovligKontoTypeValg);
             if (kontoTypeValg == "i")
             {
-                int kontoValg = KundeKontoVælg.VælgIndlånKonto();
-                Console.WriteLine("Du har valgt konto nr " + kontoValg.ToString() + "Indtast beløb du vil indsætte");
-                do
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public void IndsætBeløb()
+        {
+            bool indlån = VælgKontoType();
+            bool UlovligtBeløbInput = true;
+            int kontoValg;
+            int beløb = 0;
+            string kontoTypeValg = string.Empty;
+            Selector KundeKontoVælg = new Selector(kunder);
+            int kundeValg = KundeKontoVælg.VælgKunde();
+            if(indlån)
+            {
+                kontoValg = KundeKontoVælg.VælgKontoType(true);
+            }
+            else
+            {
+                kontoValg = KundeKontoVælg.VælgKontoType(false);
+            }
+            Console.WriteLine("Du har valgt konto nr " + kontoValg.ToString() + "Indtast beløb du vil indsætte");
+            do
+            {
+                try
                 {
-                    try
-                    {
-                        beløb = int.Parse(Console.ReadLine());
-                    }
-                    catch
-                    {
-                        Console.WriteLine("Dit input var ikke et tal");
-                        continue;
-                    }
-                    if(beløb > 0)
-                    {
-                        UlovligtBeløbInput = false;
-                    }
+                    beløb = int.Parse(Console.ReadLine());
                 }
-                while (UlovligtBeløbInput);
+                catch
+                {
+                    Console.WriteLine("Dit input var ikke et tal");
+                    continue;
+                }
+                if (beløb > 0)
+                {
+                    UlovligtBeløbInput = false;
+                }
+            }
+            while (UlovligtBeløbInput);
+            if(indlån)
+            {
                 kunder[kundeValg - 1].GetSetIndlånKontoer[kontoValg - 1].IndsætBeløb(beløb);
                 Console.WriteLine("Saldoen på kontoen er nu " + kunder[kundeValg - 1].GetSetIndlånKontoer[kontoValg - 1].GetSetSaldo);
             }
             else
             {
-                int kontoValg = KundeKontoVælg.VælgUdlånKonto();
-                Console.WriteLine("Du har valgt konto nr " + kontoValg.ToString() + "Indtast beløb du vil indsætte");
-                do
-                {
-                    try
-                    {
-                        beløb = int.Parse(Console.ReadLine());
-                    }
-                    catch
-                    {
-                        Console.WriteLine("Dit input var ikke et tal");
-                        continue;
-                    }
-                    if (beløb > 0)
-                    {
-                        UlovligtBeløbInput = false;
-                    }
-                }
-                while (UlovligtBeløbInput);
                 kunder[kundeValg - 1].GetSetUdlånKontoer[kontoValg - 1].IndsætBeløb(beløb);
                 Console.WriteLine("Saldoen på kontoen er nu " + kunder[kundeValg - 1].GetSetUdlånKontoer[kontoValg - 1].GetSetSaldo);
             }

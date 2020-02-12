@@ -14,7 +14,6 @@ namespace DetLillePengeInstitut
         }
         private int kontoNummer;
         private double saldo;
-        private static double rentefod = 1.02;
         private static int KontoNummerIncrementer;
         public int GetSetKontoNummer
         {
@@ -30,12 +29,6 @@ namespace DetLillePengeInstitut
         {
             GetSetKontoNummer = KontoNummerIncrementer;
             GetSetSaldo = 0;
-        }
-        public void PrintKonto()
-        {
-            Console.WriteLine("Konto nr: " + GetSetKontoNummer.ToString());
-            Console.WriteLine("Saldo: " + GetSetSaldo.ToString());
-            Console.WriteLine("Rentefod: " + rentefod.ToString());
         }
         public void IndsætBeløb(int Beløb)
         {

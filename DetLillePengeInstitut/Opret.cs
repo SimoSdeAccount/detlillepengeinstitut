@@ -14,7 +14,6 @@ namespace DetLillePengeInstitut
         {
             kunder = inKunder;
         }
-        
         public List<Kunde> GetKunder
         {
             get { return kunder; }

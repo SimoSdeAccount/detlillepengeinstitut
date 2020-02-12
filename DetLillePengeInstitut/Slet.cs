@@ -38,12 +38,12 @@ namespace DetLillePengeInstitut
             while (ulovligKontoTypeValg);
             if (kontoTypeValg == "i")
             {
-                int kontoValg = KundeKontoVælg.VælgIndlånKonto();
+                int kontoValg = KundeKontoVælg.VælgKontoType(true);
                 Kunder[kundeValg - 1].GetSetIndlånKontoer.RemoveAt(kontoValg - 1);
             }
             else
             {
-                int kontoValg = KundeKontoVælg.VælgUdlånKonto();
+                int kontoValg = KundeKontoVælg.VælgKontoType(false);
                 Kunder[kundeValg - 1].GetSetUdlånKontoer.RemoveAt(kontoValg - 1);
             }
             return Kunder;

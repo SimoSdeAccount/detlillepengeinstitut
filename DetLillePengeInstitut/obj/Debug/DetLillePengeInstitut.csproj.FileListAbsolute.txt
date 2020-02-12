@@ -4,3 +4,9 @@ C:\Users\HFGF\source\repos\DetLillePengeInstitut\DetLillePengeInstitut\bin\Debug
 C:\Users\HFGF\source\repos\DetLillePengeInstitut\DetLillePengeInstitut\obj\Debug\DetLillePengeInstitut.csprojAssemblyReference.cache
 C:\Users\HFGF\source\repos\DetLillePengeInstitut\DetLillePengeInstitut\obj\Debug\DetLillePengeInstitut.exe
 C:\Users\HFGF\source\repos\DetLillePengeInstitut\DetLillePengeInstitut\obj\Debug\DetLillePengeInstitut.pdb
+C:\Users\Simon\source\repos\DetLillePengeInstitut\DetLillePengeInstitut\bin\Debug\DetLillePengeInstitut.exe.config
+C:\Users\Simon\source\repos\DetLillePengeInstitut\DetLillePengeInstitut\bin\Debug\DetLillePengeInstitut.exe
+C:\Users\Simon\source\repos\DetLillePengeInstitut\DetLillePengeInstitut\bin\Debug\DetLillePengeInstitut.pdb
+C:\Users\Simon\source\repos\DetLillePengeInstitut\DetLillePengeInstitut\obj\Debug\DetLillePengeInstitut.csprojAssemblyReference.cache
+C:\Users\Simon\source\repos\DetLillePengeInstitut\DetLillePengeInstitut\obj\Debug\DetLillePengeInstitut.exe
+C:\Users\Simon\source\repos\DetLillePengeInstitut\DetLillePengeInstitut\obj\Debug\DetLillePengeInstitut.pdb
